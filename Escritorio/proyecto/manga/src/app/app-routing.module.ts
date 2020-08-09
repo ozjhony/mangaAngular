@@ -5,10 +5,26 @@ import { DefaultComponent } from './public/home/default/default.component'
 
 const routes: Routes = [
 {
+  path : '/home',
+  component:DefaultComponent
+},
+
+{
   path:'',
   pathMatch:'full',
   component:DefaultComponent
-  
+},
+{
+  path:'security',
+  loadChildren:()=> import ('./modules/security/security.module').then(m=>m.SecurityModule)
+},
+{
+  path:'usuarios',
+  loadChildren:()=>import('./modules/usuarios/usuarios.module').then(m=>m.UsuariosModule)
+},
+{
+  path:'parameters',
+  loadChildren:()=> import('./modules/parameters/parameters.module').then(m=>m.ParametersModule)
 }
 
 
