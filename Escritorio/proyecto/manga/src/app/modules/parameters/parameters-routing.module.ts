@@ -4,8 +4,13 @@ import {SubirMangaComponent}from './mangas/subir-manga/subir-manga.component';
 import { EditarMangaComponent} from './mangas/editar-manga/editar-manga.component';
 import {EliminarMangaComponent} from './mangas/eliminar-manga/eliminar-manga.component';
 import {ListaCapitulosComponent} from './mangas/lista-capitulos/lista-capitulos.component'
+import { ListaMangasComponent } from './biblioteca/lista-mangas/lista-mangas.component';
 
 const routes: Routes = [
+  {
+   path:'biblioteca',
+   component:ListaMangasComponent
+  },
   {
     path:'subir-manga',
     component:SubirMangaComponent

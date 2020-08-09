@@ -1,10 +1,19 @@
 <nav>
     <div class="nav-wrapper">
-     <a href="#" class="large material-icons">airline_seat_flat_angled</a>
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a href="sass.html">login</a></li>
-        <li><a href="badges.html">registrarse</a></li>
-        <li><a href="collapsible.html">ir a biblioteca</a></li>
+   <!--  <a href="#" class="large material-icons">airline_seat_flat_angled</a> -->
+   <a href="#!" class="material-icons">airline_seat_flat_angled</a>
+   <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul id="nav-mobile" class="sidenav-trigger" class="right hide-on-med-and-down">
+        <li><a routerLink="/security/login">login</a></li>
+        <li><a routerLink="/usuarios/registro">registrarse</a></li>
+        <li><a routerLink="/parameters/biblioteca">ir a biblioteca</a></li>
       </ul>
     </div>
   </nav>
+
+  <ul class="sidenav" id="mobile-demo">
+    <li><a routerLink="/security/login">login</a></li>
+    <li><a routerLink="/usuarios/registro">registrarse</a></li>
+    <li><a routerLink="/parameters/biblioteca">ir a biblioteca</a></li>
+    
+  </ul>
