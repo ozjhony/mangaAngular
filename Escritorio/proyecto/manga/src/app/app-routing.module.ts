@@ -5,7 +5,7 @@ import { DefaultComponent } from './public/home/default/default.component'
 
 const routes: Routes = [
 {
-  path : '/home',
+  path : 'home',
   component:DefaultComponent
 },
 
