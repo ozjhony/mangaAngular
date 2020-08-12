@@ -4,6 +4,7 @@ import { UserModel } from "./security/user.model";
 export class UsuarioModel{
 
    id?:string;
+   username:string;
    nombre:string;
    apellido:string;
    celular:string;

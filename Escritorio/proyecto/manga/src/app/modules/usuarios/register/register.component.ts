@@ -26,14 +26,13 @@ fgValidator: FormGroup;
   FormBuilding() {
     this.fgValidator= this.fb.group(
       {
-        name: ['', [Validators.required],Validators.minLength(2)],
-        last_name:['', [Validators.required],Validators.minLength(2)],
-        email:['', [Validators.required],Validators.email],
-        pass:['',[Validators.required],Validators.minLength(6)],
-        confirm_pass:['',[Validators.required],Validators.minLength(6)],
-        cel:['', [Validators.required],Validators.minLength(12), Validators.maxLength(14)],
-        country:['', [Validators.required],Validators.minLength(2)],
-        city:['', [Validators.required],Validators.minLength(2)],
+        username:['',[Validators.required]],
+        name: ['', [Validators.required,Validators.minLength(2)]],
+        last_name:['', [Validators.required,Validators.minLength(2)]],
+        email:['', [Validators.required,Validators.email]],
+        cel:['', [Validators.required,Validators.minLength(12), Validators.maxLength(14)]],
+        country:['', [Validators.required,Validators.minLength(2)]],
+        city:['', [Validators.required,Validators.minLength(2)]],
         date:['', [Validators.required]]
       }
     )
@@ -61,6 +60,7 @@ fgValidator: FormGroup;
 
   getUsuarioData(): UsuarioModel {
     let model = new UsuarioModel();
+    model.username=this.fgv.username.value;
     model.nombre = this.fgv.name.value;
     model.apellido=this.fgv.last_name.value;
     model.celular=this.fgv.cel.value;
