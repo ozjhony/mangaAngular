@@ -60,6 +60,15 @@ export class SecurityService {
     return currentSession;
   }
 
+  getToken(): String {
+    let sessionData = this.getSessionData();
+    let currentSession = '';
+    if (sessionData) {
+      currentSession = JSON.parse(sessionData).token;
+    }
+    return currentSession;
+  }
+
 
   logout(){
     localStorage.removeItem("session");
