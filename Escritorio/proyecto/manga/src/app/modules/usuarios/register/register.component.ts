@@ -26,13 +26,13 @@ fgValidator: FormGroup;
   FormBuilding() {
     this.fgValidator= this.fb.group(
       {
-        name: ['', [Validators.required],Validators.minLength(2)],
-        last_name:['', [Validators.required],Validators.minLength(2)],
+        name: ['', [Validators.required,Validators.minLength(2)]],
+        last_name:['', [Validators.required,Validators.minLength(2)]],
         username:['',[Validators.required]],
-        email:['', [Validators.required],Validators.email],
-        cel:['', [Validators.required],Validators.minLength(12), Validators.maxLength(14)],
-        country:['', [Validators.required],Validators.minLength(2)],
-        city:['', [Validators.required],Validators.minLength(2)],
+        email:['', [Validators.required,Validators.email]],
+        cel:['', [Validators.required,Validators.minLength(12), Validators.maxLength(14)]],
+        country:['', [Validators.required,Validators.minLength(2)]],
+        city:['', [Validators.required,Validators.minLength(2)]],
         date:['', [Validators.required]]
       }
     )
