@@ -4,7 +4,7 @@ import {FormsConfig} from '../../../config/forms-config';
 import {SecurityService} from '../../../services/security.service';
 import {Router} from '@angular/router';
 import {UserModel} from '../../../modelos/security/user.model';
-//import MD5 from 'crypto-js/md5';
+import MD5 from 'crypto-js/md5';
 
 declare const showMessage: any;
 
@@ -62,8 +62,8 @@ usernameMinLength = FormsConfig.DOCUMENT_MIN_LENGTH;
     getLoginData(): UserModel {
       let model = new UserModel();
       model.username = this.fgv.username.value;
-     // model.password = MD5(this.fgv.password.value).toString();
-      model.password = this.fgv.password.value.toString();
+      model.password = MD5(this.fgv.password.value).toString();
+     // model.password = this.fgv.password.value.toString();
       return model;
     }
 
