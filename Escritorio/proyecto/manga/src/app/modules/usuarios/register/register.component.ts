@@ -28,9 +28,8 @@ fgValidator: FormGroup;
       {
         name: ['', [Validators.required],Validators.minLength(2)],
         last_name:['', [Validators.required],Validators.minLength(2)],
+        username:['',[Validators.required]],
         email:['', [Validators.required],Validators.email],
-        pass:['',[Validators.required],Validators.minLength(6)],
-        confirm_pass:['',[Validators.required],Validators.minLength(6)],
         cel:['', [Validators.required],Validators.minLength(12), Validators.maxLength(14)],
         country:['', [Validators.required],Validators.minLength(2)],
         city:['', [Validators.required],Validators.minLength(2)],
