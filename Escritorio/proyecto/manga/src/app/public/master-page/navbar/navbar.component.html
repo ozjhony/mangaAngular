@@ -4,16 +4,18 @@
    <a href="#!" class="material-icons">home</a>
    <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
       <ul id="nav-mobile" class="sidenav-trigger" class="right hide-on-med-and-down">
-        <li><a routerLink="/security/login">login</a></li>
-        <li><a routerLink="/usuarios/registro">registrarse</a></li>
-        <li><a routerLink="/parameters/biblioteca">ir a biblioteca</a></li>
+        <li *ngIf="!isLogged"><a routerLink="/security/login">Login</a></li>
+        <li *ngIf="isLogged"><a routerLink="/security/logout">Logout</a></li>
+        <li *ngIf="isLogged"><a routerLink="/security/change-password">Change Password</a></li>
+        <li *ngIf="!isLogged"><a routerLink="/usuarios/registro">Register</a></li>
       </ul>
     </div>
   </nav>
 
   <ul class="sidenav" id="mobile-demo">
-    <li><a routerLink="/security/login">login</a></li>
-    <li><a routerLink="/usuarios/registro">registrarse</a></li>
-    <li><a routerLink="/parameters/biblioteca">ir a biblioteca</a></li>
-    </ul>
+      <li *ngIf="!isLogged"><a routerLink="/security/login">Login</a></li>
+      <li *ngIf="isLogged"><a routerLink="/security/logout">Logout</a></li>
+      <li *ngIf="isLogged"><a routerLink="/security/change-password">Change Password</a></li>
+      <li *ngIf="!isLogged"><a routerLink="/usuarios/registro">Register</a></li>
+ </ul>
   
