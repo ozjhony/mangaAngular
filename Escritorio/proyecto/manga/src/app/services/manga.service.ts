@@ -29,7 +29,7 @@ export class MangaService {
   saveNewRecord(record: MangaModel): Observable<MangaModel> {
     return this.http.post<MangaModel>(`${ServiceConfig.BASE_URL}${this.entity}`, record, {
       headers: new HttpHeaders({
-       // 'Content-Type': 'application/json',
+        'Content-Type': 'application/json',
         //'Authorization': `Bearer ${this.token}`
       })
     });

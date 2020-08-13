@@ -39,7 +39,7 @@ export class SubirMangaComponent implements OnInit {
       this.service.saveNewRecord(model).subscribe(
         data => {
           showMessage("Record saved successfuly");
-          this.router.navigate(['/parameters/brand-list']);
+          this.router.navigate(['/parameters/lista-mangas']);
         },
         error => {
           showMessage("Error saving.");
@@ -53,7 +53,6 @@ export class SubirMangaComponent implements OnInit {
     let model = new MangaModel();
     model.nombre = this.fgv.nombre.value;
     model.categoria = this.fgv.categoria.value;
-    model.capitulos=this.fgv.capitulos.value;
     return model;
   }
 
