@@ -29,8 +29,8 @@ export class MangaService {
   saveNewRecord(record: MangaModel): Observable<MangaModel> {
     return this.http.post<MangaModel>(`${ServiceConfig.BASE_URL}${this.entity}`, record, {
       headers: new HttpHeaders({
-        'Content-Type': 'application/json',
-        'Authorization': `Bearer ${this.token}`
+       // 'Content-Type': 'application/json',
+        //'Authorization': `Bearer ${this.token}`
       })
     });
   }
@@ -38,7 +38,7 @@ export class MangaService {
   EditRecord(record: MangaModel): Observable<MangaModel> {
     return this.http.put<MangaModel>(`${ServiceConfig.BASE_URL}${this.entity}/${record.id}`, record, {
       headers: new HttpHeaders({
-        Authorization: `Bearer ${this.token}`
+       // Authorization: `Bearer ${this.token}`
       })
     });
   }
@@ -46,7 +46,7 @@ export class MangaService {
   DeleteRecord(recordId: String): Observable<any> {
     return this.http.delete(`${ServiceConfig.BASE_URL}${this.entity}/${recordId}`, {
       headers: new HttpHeaders({
-        Authorization: `Bearer ${this.token}`
+       // Authorization: `Bearer ${this.token}`
       })
     });
   }

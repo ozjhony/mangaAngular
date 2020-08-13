@@ -5,6 +5,6 @@ export class MangaModel{
  id?:string;
  nombre:string;
  categoria:string;
- capitulo:CapituloModel;
-
-}
+ capitulos:CapituloModel [];
+ 
+} 

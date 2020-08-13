@@ -9,13 +9,17 @@ import { EditarCapituloComponent } from './capitulo/editar-capitulo/editar-capit
 import { EliminarCapituloComponent } from './capitulo/eliminar-capitulo/eliminar-capitulo.component';
 import { AgregarCapituloComponent } from './capitulo/agregar-capitulo/agregar-capitulo.component';
 import {ListaMangaComponent} from './mangas/lista-manga/lista-manga.component';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+
 
 
 @NgModule({
   declarations: [SubirMangaComponent, EliminarMangaComponent, ListaMangaComponent,EditarMangaComponent, EditarCapituloComponent, EliminarCapituloComponent, AgregarCapituloComponent],
   imports: [
     CommonModule,
-    ParametersRoutingModule
+    ParametersRoutingModule,
+    ReactiveFormsModule,
+    FormsModule
   ]
 })
 export class ParametersModule { }
