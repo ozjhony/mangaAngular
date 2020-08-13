@@ -13,12 +13,6 @@
             </div>
           </div>
           <div class="row">
-            <div class="input-field col s6">
-              <input id="username" formControlName="username" type="text" >
-              <label for="username">Nombre de usuario</label>
-            </div>
-          </div>
-          <div class="row">
             <div class="input-field col s12">
               <input id="email" formControlName="email" type="email" >
               <label for="email">Email</label>
@@ -39,7 +33,7 @@
                 <input id="celphone" formControlName="cel" type="text"  minlength="6" >
                 <label for="celphone">Numero de celular</label>
             </div>          
-            <div class="input-field col s6">
+            <!-- <div class="input-field col s6">
                 <input id="date_birth" type="date" formControlName="date" class="datepicker">
                 <label for="date_birth">Fecha de nacimiento</label>
                 <script>
@@ -49,7 +43,11 @@
                   });
                 </script>
                 
-            </div>
+            </div>-->
+            <div class="input-field col s6">
+              <input id="date_birth" formControlName="date" type="text"  minlength="6" >
+              <label for="date_birth">Fecha de Nacimiento (DD/MM/AAAA) </label>
+          </div> 
           </div>
           
           <div class="input-field col s6">

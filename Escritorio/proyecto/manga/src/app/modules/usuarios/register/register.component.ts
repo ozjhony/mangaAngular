@@ -26,7 +26,7 @@ fgValidator: FormGroup;
   FormBuilding() {
     this.fgValidator= this.fb.group(
       {
-        username:['',[Validators.required]],
+        //username:['',[Validators.required]],
         name: ['', [Validators.required,Validators.minLength(2)]],
         last_name:['', [Validators.required,Validators.minLength(2)]],
         email:['', [Validators.required,Validators.email]],
@@ -60,14 +60,14 @@ fgValidator: FormGroup;
 
   getUsuarioData(): UsuarioModel {
     let model = new UsuarioModel();
-    model.username=this.fgv.username.value;
-    model.nombre = this.fgv.name.value;
-    model.apellido=this.fgv.last_name.value;
+    //model.username=this.fgv.username.value;
+    model.name = this.fgv.name.value;
+    model.lastname=this.fgv.last_name.value;
     model.celular=this.fgv.cel.value;
     model.ciudad=this.fgv.city.value;
     model.email=this.fgv.email.value;
     model.pais=this.fgv.country.value;
-    model.fechaNacimiento=this.fgv.date.value;
+    model.fechaNacimiento=this.fgv.date.value.toString();
     
 
     return model;

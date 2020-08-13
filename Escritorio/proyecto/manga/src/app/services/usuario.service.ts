@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
 })
 export class UsuarioService {
 
-  entity:'usuario'
+  entity='usuario'
 
   constructor(private http:HttpClient) { 
     
