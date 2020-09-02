@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { EliminarCapituloComponent } from './eliminar-capitulo.component';
+import { ListaCapitulosComponent } from './lista-capitulos.component';
 
-describe('EliminarCapituloComponent', () => {
-  let component: EliminarCapituloComponent;
-  let fixture: ComponentFixture<EliminarCapituloComponent>;
+describe('ListaCapitulosComponent', () => {
+  let component: ListaCapitulosComponent;
+  let fixture: ComponentFixture<ListaCapitulosComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ EliminarCapituloComponent ]
+      declarations: [ ListaCapitulosComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(EliminarCapituloComponent);
+    fixture = TestBed.createComponent(ListaCapitulosComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -29,8 +29,6 @@
             ],
             "scripts": [
               "node_modules/materialize-css/dist/js/materialize.js"
-
-              
             ]
           },
           "configurations": {
@@ -124,6 +122,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "manga"
+    }
+  },
+  "defaultProject": "manga",
+  "cli": {
+    "analytics": false
+  }
 }

@@ -27,13 +27,11 @@ fgValidator: FormGroup;
     this.fgValidator= this.fb.group(
       {
         //username:['',[Validators.required]],
-        name: ['', [Validators.required,Validators.minLength(2)]],
-        last_name:['', [Validators.required,Validators.minLength(2)]],
+        nombre: ['', [Validators.required,Validators.minLength(2)]],
         email:['', [Validators.required,Validators.email]],
-        cel:['', [Validators.required,Validators.minLength(12), Validators.maxLength(14)]],
-        country:['', [Validators.required,Validators.minLength(2)]],
-        city:['', [Validators.required,Validators.minLength(2)]],
-        date:['', [Validators.required]]
+        celular:['', [Validators.required,Validators.minLength(12), Validators.maxLength(14)]],
+        pais:['', [Validators.required,Validators.minLength(2)]],
+        ciudad:['', [Validators.required,Validators.minLength(2)]]
       }
     )
   }
@@ -61,13 +59,11 @@ fgValidator: FormGroup;
   getUsuarioData(): UsuarioModel {
     let model = new UsuarioModel();
     //model.username=this.fgv.username.value;
-    model.name = this.fgv.name.value;
-    model.lastname=this.fgv.last_name.value;
-    model.celular=this.fgv.cel.value;
-    model.ciudad=this.fgv.city.value;
+    model.nombre = this.fgv.nombre.value;
+    model.celular=this.fgv.celular.value;
+    model.ciudad=this.fgv.ciudad.value;
     model.email=this.fgv.email.value;
-    model.pais=this.fgv.country.value;
-    model.fechaNacimiento=this.fgv.date.value.toString();
+    model.pais=this.fgv.pais.value;
     
 
     return model;

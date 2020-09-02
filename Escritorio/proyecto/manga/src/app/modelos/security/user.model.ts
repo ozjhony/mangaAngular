@@ -5,7 +5,7 @@ export class UserModel{
     password?: String;
     usuarioId?: String;
     role?: number;
-    token?: String;
+    //token?: String;
     isLogged: Boolean = false;
     
 }

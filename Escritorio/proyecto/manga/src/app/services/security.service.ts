@@ -46,7 +46,7 @@ export class SecurityService {
         usuarioId: sessionData.data.usuarioId,
         username: sessionData.data.username,
         role: sessionData.data.role,
-        token: sessionData.token,
+        //token: sessionData.token,
         isLogged: true
       };
       localStorage.setItem('session', JSON.stringify(data));
