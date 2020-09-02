@@ -9,11 +9,12 @@ import { AgregarCapituloComponent } from './capitulo/agregar-capitulo/agregar-ca
 import {ListaMangaComponent} from './mangas/lista-manga/lista-manga.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { ListaCapitulosComponent } from './capitulo/lista-capitulos/lista-capitulos.component';
+import { MangaImagesComponent } from './mangas/manga-images/manga-images.component';
 
 
 
 @NgModule({
-  declarations: [SubirMangaComponent, ListaMangaComponent,EditarMangaComponent, EditarCapituloComponent, AgregarCapituloComponent, ListaCapitulosComponent],
+  declarations: [SubirMangaComponent, ListaMangaComponent,EditarMangaComponent, EditarCapituloComponent, AgregarCapituloComponent, ListaCapitulosComponent, MangaImagesComponent],
   imports: [
     CommonModule,
     ParametersRoutingModule,
