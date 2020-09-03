@@ -27,9 +27,9 @@ fgValidator: FormGroup;
     this.fgValidator= this.fb.group(
       {
         //username:['',[Validators.required]],
-        nombre: ['', [Validators.required,Validators.minLength(2)]],
+        nombre: ['', [Validators.required]],
         email:['', [Validators.required,Validators.email]],
-        celular:['', [Validators.required,Validators.minLength(12), Validators.maxLength(14)]],
+        celular:['', [Validators.required,Validators.minLength(5), Validators.maxLength(14)]],
         pais:['', [Validators.required,Validators.minLength(2)]],
         ciudad:['', [Validators.required,Validators.minLength(2)]]
       }
